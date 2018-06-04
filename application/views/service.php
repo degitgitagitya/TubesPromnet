@@ -21,7 +21,7 @@ $no = 1;
 
 			<div class="row my-2">
 				<div class="col-12">
-					<select class="p-2" style="border: 3px; border-radius: 20px;" name="kategori" id="kategori">
+					<select required class="p-2" style="border: 3px; border-radius: 20px;" name="kategori" id="kategori">
 						<option value="" disabled selected>--Kategori Service--</option>
 						<?php foreach ($referensijasa as $value){?>
 
@@ -64,10 +64,10 @@ $no = 1;
 
 			<div class="row">
 				<div class="col-6">
-					<a href="" class="btn btn-warning">Back</a>
+					<a href="<?php echo base_url('/index.php/Pelanggan_C')?>" class="btn btn-warning">Back</a>
 				</div>
 				<div class="col-6">
-					<a href="" class="btn btn-success">Next</a>
+					<a href="<?php echo base_url('/index.php/Beli_C')?>" class="btn btn-success">Next</a>
 				</div>
 			</div>
 		</div>

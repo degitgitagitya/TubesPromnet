@@ -14,7 +14,7 @@ class Service_C extends CI_Controller{
 		$this->load->view('header');
 		$this->load->view('navbar');
 		$data['referensijasa'] = $this->Jasa_M->getAll()->result();
-		$data['jasa'] = $this->Jasa_M->getView($_SESSION['id'])->result();
+		$data['jasa'] = $this->Jasa_M->getView($_SESSION['id_transaksi'])->result();
 		$this->load->view('service',$data);
 		$this->load->view('footer');
 	}
@@ -22,7 +22,7 @@ class Service_C extends CI_Controller{
 	function add(){
 
 		$id_referensi = $this->input->post('kategori');
-		$this->Jasa_M->insert($id_referensi,$_SESSION['id']);
+		$this->Jasa_M->insert($id_referensi,$_SESSION['id_transaksi']);
 		$this->index();
 	}
 
